@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="IntroScene" id="BYZ-38-t0r" customClass="IntroViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="bzk-5E-NdI">
+                                <rect key="frame" x="37.5" y="35" width="300" height="338"/>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="90W-4T-qPE"/>
+                                    <constraint firstAttribute="height" constant="338" id="GPY-C6-x4K"/>
+                                    <constraint firstAttribute="width" secondItem="bzk-5E-NdI" secondAttribute="height" multiplier="150:169" id="ZOn-2v-G75"/>
+                                </constraints>
+                                <string key="text">You have been dropped into a hedge maze. The growth is thorny and emerald green and when you aren't looking directly at it, it seems to glow. It is too tall for you to look over, even if you jumped. There are two long paths stretching to your left and to your right. Which way do you go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eF4-v3-kpb">
+                                <rect key="frame" x="254" y="388" width="55" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Right">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Xff-h2-zMT" kind="presentation" id="Ms8-7q-saw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-19-UJg">
+                                <rect key="frame" x="78" y="388" width="41" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Left">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SnQ-3T-Kou" kind="presentation" id="yFv-52-bcH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bzk-5E-NdI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BCp-W2-Aum"/>
+                            <constraint firstItem="bzk-5E-NdI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="FLW-AL-KNb"/>
+                            <constraint firstItem="8gk-19-UJg" firstAttribute="top" secondItem="bzk-5E-NdI" secondAttribute="bottom" constant="15" id="P4C-bC-9vr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eF4-v3-kpb" secondAttribute="trailing" constant="66" id="Ub6-b2-uza"/>
+                            <constraint firstItem="8gk-19-UJg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="ZbN-6U-fTj"/>
+                            <constraint firstItem="8gk-19-UJg" firstAttribute="centerY" secondItem="eF4-v3-kpb" secondAttribute="centerY" id="eGO-ML-ia9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="introLabel" destination="bzk-5E-NdI" id="afV-1A-IaL"/>
+                        <outlet property="introLeft" destination="8gk-19-UJg" id="lYA-kX-Yu1"/>
+                        <outlet property="introRight" destination="eF4-v3-kpb" id="H5D-zF-Fzx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="116.49175412293854"/>
+        </scene>
+        <!--Left1Controller-->
+        <scene sceneID="Pbf-UZ-Ss3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Left" referencedIdentifier="Left1Controller" id="SnQ-3T-Kou" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeG-LJ-Ug0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="513"/>
+        </scene>
+        <!--Right1Controller-->
+        <scene sceneID="hMk-G5-vAg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Right" referencedIdentifier="Right1Controller" id="Xff-h2-zMT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Es6-g6-Yfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="116"/>
+        </scene>
+        <!--Exit View Controller-->
+        <scene sceneID="CSv-WY-eaV">
+            <objects>
+                <viewController storyboardIdentifier="ExitController" id="vzP-ze-TEl" customClass="ExitViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pc8-rE-J6g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wz-aX-FbS">
+                                <rect key="frame" x="37.5" y="35" width="300" height="550"/>
+                                <color key="backgroundColor" red="0.9612470269203186" green="0.878673255443573" blue="0.84554702043533325" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="XOJ-FW-viT"/>
+                                    <constraint firstAttribute="width" constant="300" id="qq4-ZL-i7a"/>
+                                </constraints>
+                                <string key="text">     You go along the path, and thank goodness, it opens up into a field of wildflowers. There is gentle laughter on the wind here. To your right and left are the outer walls of the maze you were just in. In the middle of the field is a large, golden tree. Despite the wind, its branches and leaves are rigid. 
+     Beyond the tree, the field continues.
+Suddenly, that sound of laughter stops. In the distance, there is another hedge. Another maze. Or - Or what if this is one huge maze? Did you check every path back there? You turn around to witness the hedge you came through attempt to weave itself together, but immediately recoil when you look, as if embarrassed.
+     You pass the golden tree, and if you touch it, it feels metallic. Upon examination of the other hedge, you find another entrance, but it is to dense to go through yet. Vines and branches are slowly untangling themselves to make a space for you to go through. You can estimate that it'll take some time before you can fit, as slow as it's going.
+     So you could go back. Look around more thoroughly. Check every path. Or you could stay here and rest until the next path opens up. What do you do?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZN-EM-jvm">
+                                <rect key="frame" x="62" y="596" width="88" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="v0D-dJ-M7W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ydx-44-eiS" kind="unwind" unwindAction="unwindToHereExitWithSegue:sender:" id="dQ2-Hx-Wva"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBp-h9-q8p">
+                                <rect key="frame" x="227" y="596" width="47" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Wait">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gV2-bO-fYu" kind="presentation" id="xY4-qG-SP2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93983167409896851" green="0.74931973218917847" blue="0.034893974661827087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Wz-aX-FbS" firstAttribute="top" secondItem="vW5-eu-tcb" secondAttribute="top" constant="15" id="2Kt-4v-v3A"/>
+                            <constraint firstItem="8Wz-aX-FbS" firstAttribute="centerX" secondItem="Pc8-rE-J6g" secondAttribute="centerX" id="6EI-cp-l5t"/>
+                            <constraint firstItem="vW5-eu-tcb" firstAttribute="bottom" secondItem="xBp-h9-q8p" secondAttribute="bottom" constant="30" id="Olw-Ni-cMc"/>
+                            <constraint firstItem="1ZN-EM-jvm" firstAttribute="leading" secondItem="vW5-eu-tcb" secondAttribute="leading" constant="62" id="Qqs-yK-8je"/>
+                            <constraint firstItem="1ZN-EM-jvm" firstAttribute="centerY" secondItem="xBp-h9-q8p" secondAttribute="centerY" id="pP7-v7-pnq"/>
+                            <constraint firstItem="xBp-h9-q8p" firstAttribute="leading" secondItem="1ZN-EM-jvm" secondAttribute="trailing" constant="77" id="zia-dI-EgJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vW5-eu-tcb"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitScroll" destination="8Wz-aX-FbS" id="fb0-RV-8VI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lk0-U0-8aT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ydx-44-eiS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="115.59220389805098"/>
+        </scene>
+        <!--Wait View Controller-->
+        <scene sceneID="uhg-o9-qbO">
+            <objects>
+                <viewController id="gV2-bO-fYu" customClass="WaitViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iYr-C7-eJb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOl-nb-bG7">
+                                <rect key="frame" x="37.5" y="35" width="300" height="420"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="9DU-x4-4to"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZgM-LZ-WZd"/>
+                                </constraints>
+                                <string key="text">     You wait. And wait. Some of the gold leaves fall, and you make a laurel. You'll be waiting a while, because the designer coder lady hasn't done the next maze yet! You can go back and look around if you like by pressing this button. It'll send you back to the last set of options. If you click wait again, you'll come right back here! 
+     Otherwise, this is all for now! Thanks for playing!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAj-gW-siq">
+                                <rect key="frame" x="143.5" y="485" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uZv-Lk-P4M" kind="unwind" unwindAction="unwindToHereWaitWithSegue:sender:" id="f3G-pJ-qhg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAA-Uw-9sZ">
+                                <rect key="frame" x="135" y="536" width="105" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uZv-Lk-P4M" kind="unwind" unwindAction="unwindToHereRestartWithSegue:sender:" id="6Uj-5q-Igq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93983167409896851" green="0.74931973218917847" blue="0.034893974661827087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YOl-nb-bG7" firstAttribute="centerX" secondItem="iYr-C7-eJb" secondAttribute="centerX" id="0so-tc-ze1"/>
+                            <constraint firstItem="SAA-Uw-9sZ" firstAttribute="top" secondItem="PAj-gW-siq" secondAttribute="bottom" constant="10" id="9Zr-ii-eHa"/>
+                            <constraint firstItem="YOl-nb-bG7" firstAttribute="top" secondItem="A6S-9m-vgf" secondAttribute="top" constant="15" id="BUE-kK-3os"/>
+                            <constraint firstItem="PAj-gW-siq" firstAttribute="top" secondItem="YOl-nb-bG7" secondAttribute="bottom" constant="30" id="HZg-X6-nhn"/>
+                            <constraint firstItem="SAA-Uw-9sZ" firstAttribute="centerX" secondItem="iYr-C7-eJb" secondAttribute="centerX" id="bdD-Ku-Xgl"/>
+                            <constraint firstItem="PAj-gW-siq" firstAttribute="centerX" secondItem="iYr-C7-eJb" secondAttribute="centerX" id="oON-C3-bye"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A6S-9m-vgf"/>
+                    </view>
+                    <connections>
+                        <outlet property="waitLabel" destination="YOl-nb-bG7" id="Hr1-0l-DtO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKu-Le-eM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uZv-Lk-P4M" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1909.5999999999999" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>

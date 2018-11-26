@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Right1Controller-->
+        <scene sceneID="riq-DX-qTA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Right" referencedIdentifier="Right1Controller" id="doJ-j2-ksK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEw-mk-R6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2377" y="-185"/>
+        </scene>
+        <!--Left1 View Controller-->
+        <scene sceneID="Mln-YF-wwq">
+            <objects>
+                <viewController storyboardIdentifier="Left1Controller" id="xQh-3r-5v2" customClass="Left1ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nWc-S8-tMW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="g38-Xd-fbN">
+                                <rect key="frame" x="37.5" y="75" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="aih-Cv-xTe"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="tG4-FB-F32"/>
+                                </constraints>
+                                <string key="text">You head to your left for a minute and then go around a corner to your right. Another minute, and a path opens up on your right (1). You can also (2) continue going straight. Or you can go in the opposite direction by (3) turning around. Which way do you go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ob-b5-1bB">
+                                <rect key="frame" x="100" y="383" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="feU-8F-IQJ" kind="presentation" id="C8o-cb-f2B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqD-rH-TOS">
+                                <rect key="frame" x="172.5" y="439" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="doJ-j2-ksK" kind="presentation" id="Ag8-kZ-Otn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwT-54-RTc">
+                                <rect key="frame" x="245" y="383" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2IP-J4-yQd" kind="presentation" id="i0y-Xd-ELp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BAh-t6-eft" firstAttribute="trailing" secondItem="IwT-54-RTc" secondAttribute="trailing" constant="100" id="IZq-2e-1Bs"/>
+                            <constraint firstItem="g38-Xd-fbN" firstAttribute="centerX" secondItem="nWc-S8-tMW" secondAttribute="centerX" id="RAo-F6-Vup"/>
+                            <constraint firstItem="OqD-rH-TOS" firstAttribute="centerX" secondItem="nWc-S8-tMW" secondAttribute="centerX" id="aOl-rj-eZg"/>
+                            <constraint firstItem="OqD-rH-TOS" firstAttribute="top" secondItem="IwT-54-RTc" secondAttribute="bottom" constant="15" id="ccr-qv-8Ej"/>
+                            <constraint firstItem="g38-Xd-fbN" firstAttribute="top" secondItem="BAh-t6-eft" secondAttribute="top" constant="55" id="djn-V1-hYa"/>
+                            <constraint firstItem="9Ob-b5-1bB" firstAttribute="centerY" secondItem="IwT-54-RTc" secondAttribute="centerY" id="lNf-ON-9gV"/>
+                            <constraint firstItem="9Ob-b5-1bB" firstAttribute="top" secondItem="g38-Xd-fbN" secondAttribute="bottom" constant="8" id="sl7-xQ-aoF"/>
+                            <constraint firstItem="9Ob-b5-1bB" firstAttribute="leading" secondItem="BAh-t6-eft" secondAttribute="leading" constant="100" id="vSx-4T-Xdh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BAh-t6-eft"/>
+                    </view>
+                    <connections>
+                        <outlet property="left1Label" destination="g38-Xd-fbN" id="rzM-JO-ThX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YdN-Au-UVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1855.2" y="-179.46026986506749"/>
+        </scene>
+        <!--Dead1 View Controller-->
+        <scene sceneID="34C-u5-yvM">
+            <objects>
+                <viewController id="feU-8F-IQJ" customClass="LDead1ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ITz-g2-sUI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyf-00-Ao1">
+                                <rect key="frame" x="143.5" y="461" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bMO-li-wLS" kind="unwind" unwindAction="unwindToHereLD1WithSegue:sender:" id="JZR-qp-nT1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="nx5-3C-row">
+                                <rect key="frame" x="37.5" y="75" width="300" height="376"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="376" id="0As-UL-qBT"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZCG-Qp-mmb"/>
+                                </constraints>
+                                <string key="text">You don't get very far down this path before there is a corner to your left, but the path does not continue. Instead, there is an alcove with an altar. There, a partially melted purple candle rests. If you touch it, you feel cold. When you turn around, you think you hear whispering, but when you look back, there's no one.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nx5-3C-row" firstAttribute="top" secondItem="VKm-pA-nKi" secondAttribute="top" constant="55" id="AsZ-AN-iR7"/>
+                            <constraint firstItem="zyf-00-Ao1" firstAttribute="top" secondItem="nx5-3C-row" secondAttribute="bottom" constant="10" id="OVH-HF-KBi"/>
+                            <constraint firstItem="nx5-3C-row" firstAttribute="centerX" secondItem="ITz-g2-sUI" secondAttribute="centerX" id="SFn-WJ-jBY"/>
+                            <constraint firstItem="zyf-00-Ao1" firstAttribute="centerX" secondItem="ITz-g2-sUI" secondAttribute="centerX" id="gsK-9Y-mQE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VKm-pA-nKi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xD5-ch-bsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bMO-li-wLS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1855.2" y="554.57271364317842"/>
+        </scene>
+        <!--Dead2 View Controller-->
+        <scene sceneID="I35-SD-Twa">
+            <objects>
+                <viewController id="Iuc-L8-6cW" customClass="LDead2ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3db-26-Zg1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7HQ-J2-a7f">
+                                <rect key="frame" x="143.5" y="440" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zsv-CW-iAH" kind="unwind" unwindAction="unwindToHereLD2WithSegue:sender:" id="dYc-tr-z0N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="8rE-4l-tBJ">
+                                <rect key="frame" x="37.5" y="75" width="300" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="4wP-nK-MrO"/>
+                                    <constraint firstAttribute="width" constant="300" id="Hiv-pc-xE9"/>
+                                </constraints>
+                                <string key="text">You go about the same distance down this path as you had the path coming up, and it ends in a right turn, but there isn't anymore path. There is, however, a statue of a large, winged figure. The wings look leathery, but the face is scaly, and the creature appears to have stone tears. Its hands are folded as if in prayer.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7HQ-J2-a7f" firstAttribute="top" secondItem="8rE-4l-tBJ" secondAttribute="bottom" constant="15" id="Iss-J5-DQf"/>
+                            <constraint firstItem="8rE-4l-tBJ" firstAttribute="centerX" secondItem="3db-26-Zg1" secondAttribute="centerX" id="R3u-nl-WSs"/>
+                            <constraint firstItem="7HQ-J2-a7f" firstAttribute="centerX" secondItem="3db-26-Zg1" secondAttribute="centerX" id="Sl1-TC-ldj"/>
+                            <constraint firstItem="8rE-4l-tBJ" firstAttribute="top" secondItem="LbZ-Xk-wnf" secondAttribute="top" constant="55" id="s3Y-vg-85Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LbZ-Xk-wnf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyq-A7-80A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zsv-CW-iAH" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1055" y="555"/>
+        </scene>
+        <!--Dead3 View Controller-->
+        <scene sceneID="pYE-eP-Rfl">
+            <objects>
+                <viewController id="c7L-QR-fzh" customClass="LDead3ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xw8-Ts-kgj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crl-hT-uja">
+                                <rect key="frame" x="143.5" y="470" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dOd-ar-BnP" kind="unwind" unwindAction="unwindToHereLD3WithSegue:sender:" id="KLT-Fx-Z9m"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="tTE-H6-s0I">
+                                <rect key="frame" x="37.5" y="75" width="300" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="380" id="5jN-8M-BHt"/>
+                                    <constraint firstAttribute="width" constant="300" id="rtW-w2-fvc"/>
+                                </constraints>
+                                <string key="text">You were right in guessing that this was a dead end, but among the thorns here are purple flowers that you don't recognize. They have a very strong smell, and if you touch a petal, your skin picks up the color. You easily wipe it off. There's a breeze carrying warmth from over the hedge. You can still see the orange glow, but you can't reach it from here.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tTE-H6-s0I" firstAttribute="centerX" secondItem="xw8-Ts-kgj" secondAttribute="centerX" id="0YL-Wq-JGx"/>
+                            <constraint firstItem="crl-hT-uja" firstAttribute="centerX" secondItem="xw8-Ts-kgj" secondAttribute="centerX" id="aW1-Ho-gyi"/>
+                            <constraint firstItem="tTE-H6-s0I" firstAttribute="top" secondItem="BB8-iJ-fwH" secondAttribute="top" constant="55" id="g6p-eC-dlA"/>
+                            <constraint firstItem="crl-hT-uja" firstAttribute="top" secondItem="tTE-H6-s0I" secondAttribute="bottom" constant="15" id="yxU-8D-LHP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BB8-iJ-fwH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbX-pf-vOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dOd-ar-BnP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="555"/>
+        </scene>
+        <!--Dead4 View Controller-->
+        <scene sceneID="LeW-0o-FS0">
+            <objects>
+                <viewController id="n2x-4t-AwK" customClass="LDead4ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gf7-l7-yMq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVe-CI-o0C">
+                                <rect key="frame" x="143.5" y="615" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="E1T-xh-Xag" kind="unwind" unwindAction="unwindToHereLD4WithSegue:sender:" id="ihq-ly-VgY"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOt-8N-CgP">
+                                <rect key="frame" x="37.5" y="55" width="300" height="550"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.40068493150684931" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9bx-G2-Nnf"/>
+                                    <constraint firstAttribute="height" constant="550" id="ddl-Rc-rhh"/>
+                                </constraints>
+                                <string key="text">     When you go this way and take an immediate left, you think you hear gentle laughter in the distance, but as you continue on, the sound fades away. There's a right and another left and another left... You arrive at a hairpin turn with an equally long path and can see stone in the distance. Is it a door? Is this the exit?
+     Alas. It's a wall. The hedges surround it and threaten to engulf it, but there are symbols painted on the dull gray bricks in bright orange. When you stop focusing on them, they seem to dance. When you turn around, there's a humming, but when you look back, the symbols are quiet and still.
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VVe-CI-o0C" firstAttribute="centerX" secondItem="gf7-l7-yMq" secondAttribute="centerX" id="5fm-ER-uX2"/>
+                            <constraint firstItem="gOt-8N-CgP" firstAttribute="top" secondItem="2UO-90-jdz" secondAttribute="top" constant="35" id="b5c-95-qbS"/>
+                            <constraint firstItem="VVe-CI-o0C" firstAttribute="top" secondItem="gOt-8N-CgP" secondAttribute="bottom" constant="10" id="wYd-bO-hhj"/>
+                            <constraint firstItem="gOt-8N-CgP" firstAttribute="centerX" secondItem="gf7-l7-yMq" secondAttribute="centerX" id="yzL-BE-box"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2UO-90-jdz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htl-58-NAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="E1T-xh-Xag" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="555"/>
+        </scene>
+        <!--Left2 View Controller-->
+        <scene sceneID="D4c-js-fAL">
+            <objects>
+                <viewController id="2IP-J4-yQd" customClass="Left2ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zeD-bz-lox">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-4K-7ve">
+                                <rect key="frame" x="37.5" y="75" width="300" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Pbt-Mh-umh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="270" id="xeX-Fx-d8x"/>
+                                </constraints>
+                                <string key="text">You immediately turn right when going this direction and spend a short time making your way before you get to a left turn which results in a fork. You can (1) go left, (2) go right, or (3) turn around. Which way do you go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDi-Ev-AvG">
+                                <rect key="frame" x="100" y="354" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Iuc-L8-6cW" kind="presentation" id="6fj-2P-MHz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSi-B2-27c">
+                                <rect key="frame" x="245" y="354" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AZc-Vq-nhK" kind="presentation" id="iF0-bv-3Ee"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnP-fS-ktq">
+                                <rect key="frame" x="172.5" y="410" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nOU-F5-wJv" kind="unwind" unwindAction="unwindToThisL2WithSegue:sender:" id="Rhj-6b-egQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rnP-fS-ktq" firstAttribute="top" secondItem="BSi-B2-27c" secondAttribute="bottom" constant="15" id="LHa-fJ-Ofi"/>
+                            <constraint firstItem="lcl-FJ-WRA" firstAttribute="trailing" secondItem="BSi-B2-27c" secondAttribute="trailing" constant="100" id="Lt6-7D-DYg"/>
+                            <constraint firstItem="iDi-Ev-AvG" firstAttribute="leading" secondItem="lcl-FJ-WRA" secondAttribute="leading" constant="100" id="XQe-hr-ne0"/>
+                            <constraint firstItem="iDi-Ev-AvG" firstAttribute="centerY" secondItem="BSi-B2-27c" secondAttribute="centerY" id="ZWU-c6-J7x"/>
+                            <constraint firstItem="Rao-4K-7ve" firstAttribute="centerX" secondItem="zeD-bz-lox" secondAttribute="centerX" id="aFC-29-I6h"/>
+                            <constraint firstItem="Rao-4K-7ve" firstAttribute="top" secondItem="lcl-FJ-WRA" secondAttribute="top" constant="55" id="ba2-HP-W3w"/>
+                            <constraint firstItem="rnP-fS-ktq" firstAttribute="top" secondItem="Rao-4K-7ve" secondAttribute="bottom" constant="65" id="wbY-dT-ULb"/>
+                            <constraint firstItem="rnP-fS-ktq" firstAttribute="centerX" secondItem="zeD-bz-lox" secondAttribute="centerX" id="xBc-O7-vLM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lcl-FJ-WRA"/>
+                    </view>
+                    <connections>
+                        <outlet property="left2Label" destination="Rao-4K-7ve" id="c0v-s6-H4E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kQ-q4-Bn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nOU-F5-wJv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1054" y="-179"/>
+        </scene>
+        <!--Left3 View Controller-->
+        <scene sceneID="WnL-3q-5FU">
+            <objects>
+                <viewController id="AZc-Vq-nhK" customClass="Left3ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J6w-qS-URO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="NI4-lW-yYe">
+                                <rect key="frame" x="37.5" y="75" width="300" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="350" id="2eI-4t-7CQ"/>
+                                    <constraint firstAttribute="width" constant="300" id="pLj-Pi-Wqa"/>
+                                </constraints>
+                                <string key="text">The path quickly branches off in three directions. To your left (1) and straight ahead (2) seem nothing special. To the right (3), the path seems to cut off abruptly, but you do see a strange glow above the plants, and the direction feels warm. You could (4) turn around. Which way do you go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ2-3N-TNd">
+                                <rect key="frame" x="88" y="480" width="41" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="n2x-4t-AwK" kind="presentation" id="ew9-av-4tz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="719-qY-njn">
+                                <rect key="frame" x="172.5" y="521" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="e5Q-Zq-OeZ" kind="unwind" unwindAction="unwindToThisL3WithSegue:sender:" id="R6w-af-I9B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DH-v9-sUG">
+                                <rect key="frame" x="172.5" y="440" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RnP-3U-fye" kind="presentation" id="oLi-56-2vy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUq-UJ-dIb">
+                                <rect key="frame" x="249.5" y="480" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="c7L-QR-fzh" kind="presentation" id="uLQ-sV-q12"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3DH-v9-sUG" firstAttribute="top" secondItem="NI4-lW-yYe" secondAttribute="bottom" constant="15" id="6Ag-4T-fhc"/>
+                            <constraint firstItem="MUq-UJ-dIb" firstAttribute="centerX" secondItem="J6w-qS-URO" secondAttribute="centerX" constant="77" id="Ooj-Hw-Ltq"/>
+                            <constraint firstItem="bJ2-3N-TNd" firstAttribute="centerY" secondItem="MUq-UJ-dIb" secondAttribute="centerY" id="WBu-Ux-6AZ"/>
+                            <constraint firstItem="bJ2-3N-TNd" firstAttribute="top" secondItem="NI4-lW-yYe" secondAttribute="bottom" constant="55" id="Xiw-vP-qCw"/>
+                            <constraint firstItem="719-qY-njn" firstAttribute="centerX" secondItem="J6w-qS-URO" secondAttribute="centerX" id="dbF-zd-7pr"/>
+                            <constraint firstItem="3DH-v9-sUG" firstAttribute="centerX" secondItem="J6w-qS-URO" secondAttribute="centerX" id="gl7-Nq-RFM"/>
+                            <constraint firstItem="bJ2-3N-TNd" firstAttribute="leading" secondItem="4Da-Pa-GwT" secondAttribute="leading" constant="88" id="grl-i1-YqT"/>
+                            <constraint firstItem="719-qY-njn" firstAttribute="top" secondItem="3DH-v9-sUG" secondAttribute="bottom" constant="40" id="heP-3y-gXF"/>
+                            <constraint firstItem="NI4-lW-yYe" firstAttribute="top" secondItem="4Da-Pa-GwT" secondAttribute="top" constant="55" id="j8n-9q-98r"/>
+                            <constraint firstItem="bJ2-3N-TNd" firstAttribute="centerX" secondItem="J6w-qS-URO" secondAttribute="centerX" constant="-79" id="r9i-zv-Kkw"/>
+                            <constraint firstItem="NI4-lW-yYe" firstAttribute="centerX" secondItem="J6w-qS-URO" secondAttribute="centerX" id="yho-VA-k7g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Da-Pa-GwT"/>
+                    </view>
+                    <connections>
+                        <outlet property="left3Label" destination="NI4-lW-yYe" id="e5F-Ym-4YE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSB-Tw-6Kg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="e5Q-Zq-OeZ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-263.19999999999999" y="-179.46026986506749"/>
+        </scene>
+        <!--Left4 View Controller-->
+        <scene sceneID="YUb-XE-dFO">
+            <objects>
+                <viewController storyboardIdentifier="Left4Controller" id="RnP-3U-fye" customClass="Left4ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fYx-Yt-P8M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="usl-k5-03p">
+                                <rect key="frame" x="37.5" y="75" width="300" height="360"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="360" id="ace-C4-jva"/>
+                                    <constraint firstAttribute="width" constant="300" id="bqf-Dg-3yh"/>
+                                </constraints>
+                                <string key="text">This is quite a long, boring path. It ends in a hairpin turn of equal distance. When you travel what you think is the same distance as from the last fork, you turn right, and can either (1) head to your left, or (2) head to your right to make another hairpin turn. As always, you can (3) turn around. Which way do you go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y25-Kt-BIV">
+                                <rect key="frame" x="172.5" y="506" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lyh-eW-TKl" kind="unwind" unwindAction="unwindToThisL4WithSegue:sender:" id="Khg-1B-EBe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Na-rh-31n">
+                                <rect key="frame" x="100" y="450" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HOp-2t-mJy" kind="presentation" id="zlc-cN-wAh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zom-ZU-Aul">
+                                <rect key="frame" x="245" y="450" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4jl-Ef-o8f" kind="presentation" id="fkH-59-moW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="usl-k5-03p" firstAttribute="centerX" secondItem="fYx-Yt-P8M" secondAttribute="centerX" id="5I9-Y7-KUf"/>
+                            <constraint firstItem="GOn-Ta-RBd" firstAttribute="trailing" secondItem="Zom-ZU-Aul" secondAttribute="trailing" constant="100" id="EPf-IQ-wFg"/>
+                            <constraint firstItem="Y25-Kt-BIV" firstAttribute="top" secondItem="Zom-ZU-Aul" secondAttribute="bottom" constant="15" id="FdH-HD-5tE"/>
+                            <constraint firstItem="Y25-Kt-BIV" firstAttribute="centerX" secondItem="fYx-Yt-P8M" secondAttribute="centerX" id="I60-IT-0w6"/>
+                            <constraint firstItem="2Na-rh-31n" firstAttribute="top" secondItem="usl-k5-03p" secondAttribute="bottom" constant="15" id="KBp-OK-qNr"/>
+                            <constraint firstItem="2Na-rh-31n" firstAttribute="centerY" secondItem="Zom-ZU-Aul" secondAttribute="centerY" id="ROD-Ow-lAb"/>
+                            <constraint firstItem="usl-k5-03p" firstAttribute="top" secondItem="GOn-Ta-RBd" secondAttribute="top" constant="55" id="UY4-sL-hY7"/>
+                            <constraint firstItem="2Na-rh-31n" firstAttribute="leading" secondItem="GOn-Ta-RBd" secondAttribute="leading" constant="100" id="tZ6-ZE-I3r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GOn-Ta-RBd"/>
+                    </view>
+                    <connections>
+                        <outlet property="left4Label" destination="usl-k5-03p" id="qIp-Ir-wzb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeE-XR-awK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lyh-eW-TKl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="-179"/>
+        </scene>
+        <!--ExitController-->
+        <scene sceneID="eLb-1P-BQD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ExitController" id="HOp-2t-mJy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHh-Hs-AES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1288" y="-180"/>
+        </scene>
+        <!--Dead5 View Controller-->
+        <scene sceneID="kiI-bG-kDE">
+            <objects>
+                <viewController id="4jl-Ef-o8f" customClass="LDead5ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QAX-fe-fHq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8K-lB-WV5">
+                                <rect key="frame" x="143.5" y="270" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="efO-nF-NtW" kind="unwind" unwindAction="unwindToHereLD5WithSegue:sender:" id="unT-qz-F3I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="7Ec-op-mH7">
+                                <rect key="frame" x="37.5" y="75" width="300" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="bDX-5O-Mcj"/>
+                                    <constraint firstAttribute="width" constant="300" id="oKE-Mv-T1L"/>
+                                </constraints>
+                                <string key="text">You head straight along for a while, but the path eventually ends. There is a small reflection pool at the end. In it is a mirror. You look in the mirror. Lookin' good!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s8K-lB-WV5" firstAttribute="centerX" secondItem="QAX-fe-fHq" secondAttribute="centerX" id="8tQ-QX-We4"/>
+                            <constraint firstItem="7Ec-op-mH7" firstAttribute="centerX" secondItem="QAX-fe-fHq" secondAttribute="centerX" id="BJP-o9-bXd"/>
+                            <constraint firstItem="s8K-lB-WV5" firstAttribute="top" secondItem="7Ec-op-mH7" secondAttribute="bottom" constant="15" id="G55-w6-zQb"/>
+                            <constraint firstItem="7Ec-op-mH7" firstAttribute="top" secondItem="qmc-dH-r7h" secondAttribute="top" constant="55" id="K89-bB-sYm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qmc-dH-r7h"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vm8-gg-oTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="efO-nF-NtW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="555"/>
+        </scene>
+    </scenes>
+</document>

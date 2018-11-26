@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Right2 View Controller-->
+        <scene sceneID="K30-1H-lfh">
+            <objects>
+                <viewController id="vnb-iw-ZXU" customClass="Right2ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Man-6R-Gut">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l2-4G-6Pd">
+                                <rect key="frame" x="37.5" y="75" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="N1f-RQ-27x"/>
+                                    <constraint firstAttribute="width" constant="300" id="tiY-0u-d2I"/>
+                                </constraints>
+                                <string key="text">You continue down the path and make another right turn which turns out to be a pin turn. A left, a right, another hairpin turn, and though you can (1) still go forward, you come upon another opening on your left (2). Or you can (3) turn around. Which way do you go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vx5-dc-Vgu">
+                                <rect key="frame" x="230" y="385" width="41" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="8DU-UN-8op"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rkq-wM-ZPK" kind="presentation" id="hSE-YJ-8V7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL2-iz-lFf">
+                                <rect key="frame" x="172.5" y="441" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xf7-df-itI" kind="unwind" unwindAction="unwindToThisR2WithSegue:sender:" id="wmn-ya-d3h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kv0-ux-Yr8">
+                                <rect key="frame" x="100" y="385" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TbI-ox-Jyh" kind="presentation" id="ZBW-bY-1CE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kv0-ux-Yr8" firstAttribute="centerY" secondItem="Vx5-dc-Vgu" secondAttribute="centerY" id="0gt-HI-K5h"/>
+                            <constraint firstItem="CL2-iz-lFf" firstAttribute="centerX" secondItem="Man-6R-Gut" secondAttribute="centerX" id="1Dx-YJ-Upk"/>
+                            <constraint firstItem="kv0-ux-Yr8" firstAttribute="centerY" secondItem="Vx5-dc-Vgu" secondAttribute="centerY" id="5Oh-gd-Td9"/>
+                            <constraint firstItem="8l2-4G-6Pd" firstAttribute="centerX" secondItem="Man-6R-Gut" secondAttribute="centerX" id="6kW-eD-SaY"/>
+                            <constraint firstItem="kv0-ux-Yr8" firstAttribute="leading" secondItem="jWS-fS-rIN" secondAttribute="leading" constant="100" id="8xU-gX-UBx"/>
+                            <constraint firstItem="Vx5-dc-Vgu" firstAttribute="leading" secondItem="kv0-ux-Yr8" secondAttribute="trailing" constant="100" id="Dty-xc-ruQ"/>
+                            <constraint firstItem="Vx5-dc-Vgu" firstAttribute="top" secondItem="8l2-4G-6Pd" secondAttribute="bottom" constant="10" id="RJh-9y-eDZ"/>
+                            <constraint firstItem="kv0-ux-Yr8" firstAttribute="top" secondItem="8l2-4G-6Pd" secondAttribute="bottom" constant="10" id="Vzp-N6-YD5"/>
+                            <constraint firstItem="8l2-4G-6Pd" firstAttribute="top" secondItem="jWS-fS-rIN" secondAttribute="top" constant="55" id="WQt-4e-8dO"/>
+                            <constraint firstItem="CL2-iz-lFf" firstAttribute="top" secondItem="kv0-ux-Yr8" secondAttribute="bottom" constant="15" id="abN-VT-qhY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jWS-fS-rIN"/>
+                    </view>
+                    <connections>
+                        <outlet property="right2Label" destination="8l2-4G-6Pd" id="l9h-DS-VUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuu-ih-gr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xf7-df-itI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="80"/>
+        </scene>
+        <!--Right3 View Controller-->
+        <scene sceneID="UMS-Nb-fkK">
+            <objects>
+                <viewController id="rkq-wM-ZPK" customClass="Right3ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eHJ-If-Ni7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hE-vh-KDP">
+                                <rect key="frame" x="37.5" y="50" width="300" height="470"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="470" id="4SZ-7j-0w5"/>
+                                    <constraint firstAttribute="width" constant="300" id="Caz-lZ-B9D"/>
+                                </constraints>
+                                <string key="text">You go along for some time with several twists and turns that you suspect are sending you back the way you came. Just as you're guessing that there's only a hedge on the left between you and where you were dropped in, a path opens up on your right. You can (1) keep going, but you actually see a strange glow that fills you with warmth over the plants to the right (2). And you can always (3) turn around. Which way do you go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-9R-X49">
+                                <rect key="frame" x="224" y="529" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ukg-P1-fIq" kind="presentation" id="4ce-ru-aZM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68K-xU-tok">
+                                <rect key="frame" x="172.5" y="580" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pnY-uf-mnK" kind="unwind" unwindAction="unwindToThisR3WithSegue:sender:" id="kpH-3m-Djl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1S-ax-Zi2">
+                                <rect key="frame" x="100" y="529" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zOf-b9-g8u" kind="presentation" id="HiU-EX-TFZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="68K-xU-tok" firstAttribute="top" secondItem="y1S-ax-Zi2" secondAttribute="bottom" constant="10" id="3fN-Af-0zm"/>
+                            <constraint firstItem="y1S-ax-Zi2" firstAttribute="leading" secondItem="FFi-Mw-cYD" secondAttribute="leading" constant="100" id="4a1-K1-viZ"/>
+                            <constraint firstItem="fDb-9R-X49" firstAttribute="leading" secondItem="y1S-ax-Zi2" secondAttribute="trailing" constant="94" id="FR0-cb-9CW"/>
+                            <constraint firstItem="6hE-vh-KDP" firstAttribute="centerX" secondItem="eHJ-If-Ni7" secondAttribute="centerX" id="QoI-gj-OZ9"/>
+                            <constraint firstItem="68K-xU-tok" firstAttribute="centerX" secondItem="eHJ-If-Ni7" secondAttribute="centerX" id="Vuw-58-me2"/>
+                            <constraint firstItem="y1S-ax-Zi2" firstAttribute="centerY" secondItem="fDb-9R-X49" secondAttribute="centerY" id="md6-iU-VH4"/>
+                            <constraint firstItem="6hE-vh-KDP" firstAttribute="top" secondItem="FFi-Mw-cYD" secondAttribute="top" constant="30" id="naD-aG-8am"/>
+                            <constraint firstItem="68K-xU-tok" firstAttribute="top" secondItem="6hE-vh-KDP" secondAttribute="bottom" constant="60" id="v8t-yO-WNT"/>
+                            <constraint firstItem="68K-xU-tok" firstAttribute="top" secondItem="fDb-9R-X49" secondAttribute="bottom" constant="10" id="yEw-jw-akF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FFi-Mw-cYD"/>
+                    </view>
+                    <connections>
+                        <outlet property="right3Label" destination="6hE-vh-KDP" id="vAQ-HI-4mO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P86-e4-7kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pnY-uf-mnK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="79.610194902548727"/>
+        </scene>
+        <!--Center View Controller-->
+        <scene sceneID="rRg-0y-3gZ">
+            <objects>
+                <viewController id="ukg-P1-fIq" customClass="RCenterViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2J-az-yv9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdc-ck-OXQ">
+                                <rect key="frame" x="37.5" y="50" width="300" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="FjM-VT-oce"/>
+                                    <constraint firstAttribute="width" constant="300" id="sz9-al-tSO"/>
+                                </constraints>
+                                <string key="text">You turn right, then left, then right, then right, and you find the source of the glowing warmth. There is a circle of what seems to be whitish-orange coals arranged in a swirling pattern. If you carefully go around the coals, there is a mostly-upright stone wall engraved with... a map of the maze? Unfortunately, all you can make out is a circle painted orange in the center of the rectangle. Around the rectangle, you can also see crumbling orange symbols.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-pq-JJL">
+                                <rect key="frame" x="143.5" y="580" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="a3s-fX-zOe" kind="unwind" unwindAction="unwindToThisRCWithSegue:sender:" id="sSW-AZ-yJU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.76369863013698636" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hTe-pq-JJL" firstAttribute="centerX" secondItem="K2J-az-yv9" secondAttribute="centerX" id="7vj-Yi-k4B"/>
+                            <constraint firstItem="cdc-ck-OXQ" firstAttribute="top" secondItem="Mer-qk-e7c" secondAttribute="top" constant="30" id="TKt-Ue-yn1"/>
+                            <constraint firstItem="hTe-pq-JJL" firstAttribute="top" secondItem="cdc-ck-OXQ" secondAttribute="bottom" constant="30" id="cWM-nB-mpa"/>
+                            <constraint firstItem="cdc-ck-OXQ" firstAttribute="centerX" secondItem="K2J-az-yv9" secondAttribute="centerX" id="uoR-dD-O2b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mer-qk-e7c"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9a-pD-wGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="a3s-fX-zOe" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1949.5999999999999" y="79.610194902548727"/>
+        </scene>
+        <!--Dead1 View Controller-->
+        <scene sceneID="ikW-4K-43U">
+            <objects>
+                <viewController id="AA1-yG-IdE" customClass="RDead1ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIh-OD-H6i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdg-fs-iUL">
+                                <rect key="frame" x="37.5" y="50" width="300" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="9aQ-DR-nYQ"/>
+                                    <constraint firstAttribute="width" constant="300" id="CfF-Ml-lXV"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <string key="text">Again, you don't get far before coming to yet another right turn. This one is also short and ends with no way to go but back. However, there is a small statue on a pedestal here. It is almost angelic with feather wings, and humanoid in figure, but its face has a beak and glassy eyes.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-6R-Hd5">
+                                <rect key="frame" x="143.5" y="410" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dXT-y7-vwx" kind="unwind" unwindAction="unwindToHereWithSegue:sender:" id="iqo-U7-OUT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sdg-fs-iUL" firstAttribute="centerX" secondItem="bIh-OD-H6i" secondAttribute="centerX" id="0Dy-HH-wBE"/>
+                            <constraint firstItem="gnQ-6R-Hd5" firstAttribute="centerX" secondItem="bIh-OD-H6i" secondAttribute="centerX" id="1Ha-Qn-iLk"/>
+                            <constraint firstItem="Sdg-fs-iUL" firstAttribute="top" secondItem="f8S-48-2bs" secondAttribute="top" constant="30" id="4Kt-CU-b8h"/>
+                            <constraint firstItem="gnQ-6R-Hd5" firstAttribute="top" secondItem="Sdg-fs-iUL" secondAttribute="bottom" constant="30" id="jY9-NS-3u2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f8S-48-2bs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9K-sF-k5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dXT-y7-vwx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="777.66116941529242"/>
+        </scene>
+        <!--Dead2 View Controller-->
+        <scene sceneID="JJK-ec-NJP">
+            <objects>
+                <viewController id="TbI-ox-Jyh" customClass="RDead2ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MPs-tX-bYo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDh-J8-tb1">
+                                <rect key="frame" x="37.5" y="50" width="300" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Jkx-pG-HRi"/>
+                                    <constraint firstAttribute="width" constant="300" id="RFS-GK-4UF"/>
+                                </constraints>
+                                <string key="text">You keep on keeping on and come upon a pedestal presenting an odd bronze form. It looks burnt and seems to whisper to you as you turn back as there is no way to continue.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-v3-xci">
+                                <rect key="frame" x="143.5" y="313" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bj5-a2-6TX" kind="unwind" unwindAction="unwindToHereRD2WithSegue:sender:" id="ZFq-Qq-tZ4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gDh-J8-tb1" firstAttribute="top" secondItem="Qt1-6d-6iZ" secondAttribute="top" constant="30" id="A4I-Eh-Z3D"/>
+                            <constraint firstItem="Bm9-v3-xci" firstAttribute="centerY" secondItem="MPs-tX-bYo" secondAttribute="centerY" id="Ahf-fK-kLO"/>
+                            <constraint firstItem="gDh-J8-tb1" firstAttribute="centerX" secondItem="MPs-tX-bYo" secondAttribute="centerX" id="XBN-CK-gPt"/>
+                            <constraint firstItem="Bm9-v3-xci" firstAttribute="centerX" secondItem="MPs-tX-bYo" secondAttribute="centerX" id="k2v-fY-b5S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qt1-6d-6iZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUz-Dq-ajB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bj5-a2-6TX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="778"/>
+        </scene>
+        <!--Dead3 View Controller-->
+        <scene sceneID="nNl-iG-bRd">
+            <objects>
+                <viewController id="zOf-b9-g8u" customClass="RDead3ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HFU-rZ-nhz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You continue and come upon a right turn. Sadly, at the end of this path is nothing whatsoever." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYg-Uo-8mu">
+                                <rect key="frame" x="37.5" y="50" width="300" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2J6-po-R6J"/>
+                                    <constraint firstAttribute="height" constant="150" id="it0-by-brZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIb-O0-JaU">
+                                <rect key="frame" x="143.5" y="313" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cnq-m9-Day" kind="unwind" unwindAction="unwindToHereRD3WithSegue:sender:" id="eNz-54-Zf3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yYg-Uo-8mu" firstAttribute="centerX" secondItem="HFU-rZ-nhz" secondAttribute="centerX" id="02Y-6z-2ou"/>
+                            <constraint firstItem="cIb-O0-JaU" firstAttribute="centerY" secondItem="HFU-rZ-nhz" secondAttribute="centerY" id="7q9-DM-Jrv"/>
+                            <constraint firstItem="yYg-Uo-8mu" firstAttribute="top" secondItem="EnV-QG-Dln" secondAttribute="top" constant="30" id="rkK-Cf-Ws6"/>
+                            <constraint firstItem="cIb-O0-JaU" firstAttribute="centerX" secondItem="HFU-rZ-nhz" secondAttribute="centerX" id="zzX-9C-cW9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EnV-QG-Dln"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSn-f9-eGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cnq-m9-Day" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="778"/>
+        </scene>
+        <!--Left1Controller-->
+        <scene sceneID="3vh-Co-75m">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Left1Controller" storyboardName="Left" referencedIdentifier="Left1Controller" id="U8u-gg-v1g" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0r-d8-tX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713" y="79"/>
+        </scene>
+        <!--Right1 View Controller-->
+        <scene sceneID="FfS-ot-qh2">
+            <objects>
+                <viewController storyboardIdentifier="Right1Controller" id="4gD-xj-8B8" customClass="Right1ViewController" customModule="WhichWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wfT-Kw-8y4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhZ-w0-7dq">
+                                <rect key="frame" x="80" y="370" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vnb-iw-ZXU" kind="presentation" id="kQr-V1-sKW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P93-kG-EQc">
+                                <rect key="frame" x="265" y="370" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AA1-yG-IdE" kind="presentation" id="d4a-J8-qko"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PF4-Kq-yMX">
+                                <rect key="frame" x="172.5" y="426" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="U8u-gg-v1g" kind="presentation" id="vWw-Tc-tHK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="340" translatesAutoresizingMaskIntoConstraints="NO" id="wtQ-JA-2Bf">
+                                <rect key="frame" x="37.5" y="75" width="300" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="UbS-Tq-FWh"/>
+                                    <constraint firstAttribute="width" constant="300" id="X08-iV-gkn"/>
+                                </constraints>
+                                <string key="text">You turn to your right and travel for a minute until you get to a corner that turns the path to your left. You hardly move forward before there is another opening on your right (1). You can keep going (2) or turn around (3). Which way do you go?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.085776068270206451" green="0.39572998881340027" blue="0.085736192762851715" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wtQ-JA-2Bf" firstAttribute="centerX" secondItem="wfT-Kw-8y4" secondAttribute="centerX" id="HVM-hl-Clo"/>
+                            <constraint firstItem="P93-kG-EQc" firstAttribute="top" secondItem="wtQ-JA-2Bf" secondAttribute="bottom" constant="15" id="IhZ-Rd-txi"/>
+                            <constraint firstItem="PF4-Kq-yMX" firstAttribute="centerX" secondItem="wfT-Kw-8y4" secondAttribute="centerX" id="TEr-ln-deS"/>
+                            <constraint firstItem="PF4-Kq-yMX" firstAttribute="top" secondItem="P93-kG-EQc" secondAttribute="bottom" constant="15" id="g6T-yC-Ucl"/>
+                            <constraint firstItem="vhZ-w0-7dq" firstAttribute="centerY" secondItem="P93-kG-EQc" secondAttribute="centerY" id="j72-lV-DKk"/>
+                            <constraint firstItem="wtQ-JA-2Bf" firstAttribute="top" secondItem="xz1-66-cPz" secondAttribute="top" constant="55" id="nNj-Ch-bbM"/>
+                            <constraint firstItem="vhZ-w0-7dq" firstAttribute="leading" secondItem="xz1-66-cPz" secondAttribute="leading" constant="80" id="oYH-fC-1wX"/>
+                            <constraint firstItem="xz1-66-cPz" firstAttribute="trailing" secondItem="P93-kG-EQc" secondAttribute="trailing" constant="80" id="yqF-Uu-PNE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xz1-66-cPz"/>
+                    </view>
+                    <connections>
+                        <outlet property="right1Back" destination="PF4-Kq-yMX" id="4ez-Rv-bqa"/>
+                        <outlet property="right1Cont" destination="P93-kG-EQc" id="xDH-G3-2ZQ"/>
+                        <outlet property="right1Label" destination="wtQ-JA-2Bf" id="SiZ-7K-oIG"/>
+                        <outlet property="right1Right" destination="vhZ-w0-7dq" id="sY8-fe-foi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aL-Q6-Avt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="79.610194902548727"/>
+        </scene>
+    </scenes>
+</document>
